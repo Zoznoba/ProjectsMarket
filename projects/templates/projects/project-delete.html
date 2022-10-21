@@ -1,0 +1,8 @@
+{% block content %}
+<form action="" method="POST">
+     {% csrf_token %}
+     <p>Вы действительно хотите удалить "{{ project }}"?</p>
+     <a href="{% url 'projects_list' %}">Отмена</a>
+     <input type="submit" name="" value="Подтвердить удаление" />
+</form>
+{% endblock %}
